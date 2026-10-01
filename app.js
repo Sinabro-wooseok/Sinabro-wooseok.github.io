@@ -58,6 +58,7 @@ function renderStatic() {
   document.documentElement.lang = L();
   document.querySelectorAll("[data-i]").forEach((el) => { el.textContent = t(el.dataset.i); });
   document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === L())));
+  $("#kpi").innerHTML = HERO_KPI.map((k) => `<li><b>${k.n}</b><span>${k[L()]}</span></li>`).join("");
   $("#feat").innerHTML = FEAT.map((f) => `<div><span>${f.k}</span><div><b>${f[L()][0]}</b><p>${f[L()][1]}</p></div></div>`).join("");
 }
 

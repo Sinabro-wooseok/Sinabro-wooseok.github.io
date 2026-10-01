@@ -4,7 +4,8 @@ const TEXT = {
     brand: "이우석 스테이",
     pill: "승인 대기",
     status: "풀타임 개발자 1명이 가예약되어 있습니다",
-    name: "이우석 · 풀스택 개발자",
+    name: "이우석 · 풀스택 엔지니어 · 위홈 기술·운영 총괄",
+    pdf: "PDF 이력서(영문)",
     tagline: "AI 코딩 에이전트로 만들고, 모든 변경은 직접 검증합니다.",
     where: "경기 고양시 · GMT+9 · 출근·재택 모두 가능",
     h_about: "숙소 소개",
@@ -41,7 +42,7 @@ const TEXT = {
     close: "닫기",
     mail_subject: "[예약 요청] 이우석 채용 문의",
     mail_from: "이 메일은 sinabro-wooseok.github.io 이력서 페이지에서 만들어졌습니다.",
-    footer: "이 페이지는 실제 숙박 예약 사이트가 아니라 이우석의 이력서입니다. PDF 이력서는 메일로 요청해 주세요.",
+    footer: "이 페이지는 실제 숙박 예약 사이트가 아니라 이우석의 이력서입니다. 국문 PDF 이력서는 메일로 요청해 주세요.",
     tz_seoul: "지금 서울은",
     tz_you: "당신의 시간대",
     tz_overlap: (h) => h > 0 ? `오전 9시~오후 6시 기준으로 업무 시간이 ${h}시간 겹칩니다.` : "업무 시간이 겹치지 않아 글로 하는 비동기 협업이 맞습니다.",
@@ -52,7 +53,8 @@ const TEXT = {
     brand: "Wooseok Stay",
     pill: "Pending",
     status: "A full-time engineer is on hold for your team",
-    name: "Wooseok Lee · Full-stack engineer",
+    name: "Wooseok Lee · Full-stack engineer · Head of Technology & Operations, Wehome",
+    pdf: "Resume PDF",
     tagline: "Builds with AI coding agents. Verifies every change himself.",
     where: "Goyang, Seoul area · GMT+9 · remote or on-site",
     h_about: "About this stay",
@@ -89,7 +91,7 @@ const TEXT = {
     close: "Close",
     mail_subject: "[Booking request] Hiring Wooseok Lee",
     mail_from: "Generated from the resume page at sinabro-wooseok.github.io.",
-    footer: "This is not a real lodging site. It is Wooseok Lee's resume. Ask by email for the PDF version.",
+    footer: "This is not a real lodging site. It is Wooseok Lee's resume. The PDF version is linked at the top.",
     tz_seoul: "It's now in Seoul",
     tz_you: "Your time zone",
     tz_overlap: (h) => h > 0 ? `${h} hours of overlap on a 9-to-6 workday.` : "No overlapping work hours, so async, written collaboration fits best.",
@@ -98,11 +100,11 @@ const TEXT = {
   },
 };
 
-const GALLERY = [
-  { n: "953 → 264", ko: "Airbnb 예약과 어긋난 달력 박수", en: "calendar nights out of sync with Airbnb" },
-  { n: "40.7s → 1.1s", ko: "가장 느린 관리자 조회", en: "slowest admin query" },
-  { n: "+42 / +52", ko: "2주간 iOS / Android 출시 빌드", en: "iOS / Android builds in 2 weeks" },
-  { n: "39 · 31", ko: "운영 중인 훅 · 스킬", en: "hooks · skills in daily use" },
+// 첫 화면 핵심 숫자
+const HERO_KPI = [
+  { n: "279 → 0", ko: "Airbnb와 이중 예약될 수 있던 박수", en: "nights open to double booking vs Airbnb" },
+  { n: "40.7s → 1.1s", ko: "가장 느린 관리자 화면", en: "slowest admin screen" },
+  { n: "+42 / +52", ko: "2주간 iOS / Android 출시 빌드", en: "iOS / Android builds shipped in 2 weeks" },
 ];
 
 const FEAT = [
