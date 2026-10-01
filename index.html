@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wooseok Lee · Stays</title>
+<meta name="description" content="Full-stack engineer who builds with AI agents and verifies every change himself. A resume you can book.">
+<meta property="og:title" content="Wooseok Lee · Stays">
+<meta property="og:description" content="A resume you can book: full-stack engineer, AI-agent workflows, Seoul (GMT+9).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sinabro-wooseok.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top"><i>WL</i><span data-i="brand"></span></a>
+    <div class="nav-r">
+      <a class="ghost" href="https://github.com/Sinabro-wooseok" target="_blank" rel="noopener">GitHub</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="ko">한국어</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="head">
+    <div class="status"><span class="pill" data-i="pill"></span><span data-i="status"></span></div>
+    <h1 data-i="name"></h1>
+    <p class="sub" data-i="tagline"></p>
+    <div class="meta">
+      <span data-i="where"></span>
+      <a href="mailto:woosuk547@naver.com">woosuk547@naver.com</a>
+      <a href="https://github.com/Sinabro-wooseok" target="_blank" rel="noopener">github.com/Sinabro-wooseok</a>
+    </div>
+  </div>
+
+  <div class="gallery" id="gallery"></div>
+
+  <div class="layout">
+    <div>
+      <section>
+        <h2 data-i="h_about"></h2>
+        <p data-i="about"></p>
+        <div class="feat" id="feat"></div>
+      </section>
+
+      <section id="reviews-sec">
+        <h2><span data-i="h_reviews"></span><small data-i="reviews_note"></small></h2>
+        <div class="chips" id="chips" role="group"></div>
+        <div class="reviews" id="reviews"></div>
+      </section>
+
+      <section>
+        <h2 data-i="h_amen"></h2>
+        <div class="amen" id="amen"></div>
+      </section>
+
+      <section>
+        <h2 data-i="h_stays"></h2>
+        <ul class="stays" id="stays"></ul>
+      </section>
+
+      <section>
+        <h2><span data-i="h_gallery"></span><small data-i="gallery_note"></small></h2>
+        <div class="work">
+          <img src="assets/repause_desktop.jpg" alt="repause.co.kr desktop" loading="lazy">
+          <img src="assets/repause_mobile.jpg" alt="repause.co.kr mobile" loading="lazy">
+        </div>
+        <p class="work-t" data-i="repause"></p>
+      </section>
+
+      <section>
+        <h2 data-i="h_rules"></h2>
+        <ol class="rules" id="rules"></ol>
+      </section>
+
+      <section>
+        <h2 data-i="h_where"></h2>
+        <div class="tz" id="tz"></div>
+      </section>
+    </div>
+
+    <aside class="book" id="book">
+      <div class="price"><b data-i="rate"></b> <span data-i="rate_unit"></span></div>
+      <form id="form" novalidate>
+        <label class="field"><span data-i="f_checkin"></span><input type="date" id="checkin" required></label>
+        <div class="err" id="err"></div>
+        <label class="field"><span data-i="f_type"></span>
+          <select id="type"></select></label>
+        <div class="field"><span data-i="f_mode"></span><div class="seg" id="mode" role="group"></div></div>
+        <label class="field"><span data-i="f_team"></span><input type="text" id="team" maxlength="60" autocomplete="organization"></label>
+        <button class="cta" type="submit" data-i="cta"></button>
+        <p class="note" data-i="no_charge"></p>
+      </form>
+      <div class="sum" id="sum"></div>
+    </aside>
+  </div>
+</main>
+
+<footer><div class="wrap" data-i="footer"></div></footer>
+
+<div class="mbar"><span><b data-i="rate"></b> <span data-i="rate_unit"></span></span><a href="#book" data-i="cta_short"></a></div>
+
+<dialog id="dlg">
+  <div class="conf">
+    <div class="top"><span class="pill" data-i="pill"></span><code id="cno"></code></div>
+    <h3 data-i="conf_title"></h3>
+    <p data-i="conf_body"></p>
+    <dl id="cdl"></dl>
+    <div class="act"><a id="mail" href="#" data-i="send"></a><button type="button" id="close" data-i="close"></button></div>
+  </div>
+</dialog>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
