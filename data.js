@@ -162,7 +162,7 @@ const REVIEWS = [
 ];
 
 const AMEN = [
-  { ko: "백엔드", en: "Backend", v: "PHP (CodeIgniter, Laravel), MySQL, Python, Node.js, REST, cron/batch" },
+  { ko: "백엔드", en: "Backend", v: "PHP (CodeIgniter), MySQL, Python, Node.js, REST, cron/batch" },
   { ko: "프론트", en: "Frontend", v: "TypeScript, React, Next.js, Tailwind, Framer Motion, accessible UI" },
   { ko: "앱", en: "Mobile", v: "Swift (iOS), Java (Android), WebView hybrid, store releases, Maestro" },
   { ko: "클라우드", en: "Cloud & edge", v: "AWS (EC2, RDS, Bedrock, CloudWatch), Cloudflare WAF, Sentry, Elasticsearch" },
