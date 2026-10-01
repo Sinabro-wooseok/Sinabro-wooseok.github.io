@@ -49,7 +49,7 @@ const TEXT = {
     all: "전체",
   },
   en: {
-    brand: "Wooseok Lee · Stays",
+    brand: "Wooseok Stay",
     pill: "Pending",
     status: "A full-time engineer is on hold for your team",
     name: "Wooseok Lee · Full-stack engineer",

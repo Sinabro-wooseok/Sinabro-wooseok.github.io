@@ -1,0 +1,90 @@
+// 숙소 투어 게임 지도·방·호스트 채팅 데이터
+// 지도 기호: # 벽, . 바닥, d 문, D 잠긴 문, H 호스트, F 프런트, 소문자는 방
+const MAP = [
+  "################",
+  "#llll#wwww#cccc#",
+  "#llll#wwww#cccc#",
+  "#llll#wwww#cccc#",
+  "##d####d####d###",
+  "#..............#",
+  "#....H.....F...#",
+  "###d####d####D##",
+  "#rrrrr#gggg#vvv#",
+  "#rrrrr#gggg#vvv#",
+  "################",
+];
+const START = { r: 5, c: 7 };
+
+const ROOMS = {
+  l: { id: "skills", ko: ["서재", "기술 스택"], en: ["Library", "Skills"] },
+  w: { id: "career", ko: ["작업실", "이전 숙박 · 경력"], en: ["Workshop", "Previous stays"] },
+  c: { id: "ai", ko: ["관제실", "AI 에이전트 운영"], en: ["Control room", "AI agents"] },
+  r: { id: "reviews", ko: ["후기 벽", "검증된 성과"], en: ["Review wall", "Verified results"] },
+  g: { id: "garden", ko: ["정원", "직접 만든 숙소: 리포즈"], en: ["Garden", "Repause, built by me"] },
+  v: { id: "vault", ko: ["금고", "잠김"], en: ["Vault", "Locked"] },
+};
+const TOUR = ["l", "w", "c", "r", "g"];
+
+const GAME_TEXT = {
+  ko: {
+    press: "PRESS START · WOOSEOK STAY",
+    quick: "한눈에 보기",
+    hint: "방향키 · WASD로 걷거나, 방을 눌러 이동하세요. 호스트(H)에게 말을 걸고 프런트(F)에서 예약할 수 있어요.",
+    hint_touch: "방을 누르거나 아래 버튼으로 이동하세요. 호스트(H)와 프런트(F)도 눌러 보세요.",
+    visited: "둘러본 방",
+    jump: "바로 가기",
+    host: "호스트", front: "프런트",
+    vault_1: "금고는 잠겨 있습니다. 보안 사고 대응 이야기는 면접에서 열어 드려요.",
+    vault_2: "정말 잠겨 있어요. 회사 보안이라서요.",
+    vault_3: "세 번이나! 이 끈기, 같이 일하면 좋겠네요. 면접에서 만나요.",
+    stamp: "CHECK-IN 완료",
+    stamp_sub: "다섯 방을 모두 둘러보셨습니다. 프런트(F)에서 예약을 확정해 주세요.",
+    to_front: "프런트로 가기",
+    chat_title: "호스트와 대화",
+    chat_hello: "안녕하세요, 호스트 이우석입니다. 궁금한 걸 눌러 주세요.",
+    typing: "입력 중",
+    reset: "처음부터",
+    close: "닫기",
+    quick_title: "한눈에 보기",
+    quick_note: "게임은 건너뛰고 내용만 보고 싶은 분을 위해 전부 펼쳐 두었습니다.",
+  },
+  en: {
+    press: "PRESS START · WOOSEOK STAY",
+    quick: "Quick view",
+    hint: "Walk with arrow keys or WASD, or click a room. Talk to the host (H) and book at the front desk (F).",
+    hint_touch: "Tap a room or use the buttons below. Try the host (H) and the front desk (F) too.",
+    visited: "Rooms visited",
+    jump: "Jump to",
+    host: "Host", front: "Front desk",
+    vault_1: "The vault is locked. Incident-response stories open in the interview.",
+    vault_2: "Still locked. It's my employer's security, after all.",
+    vault_3: "Three tries! I like that persistence. See you in the interview.",
+    stamp: "CHECKED IN",
+    stamp_sub: "You've seen all five rooms. Head to the front desk (F) to confirm.",
+    to_front: "Go to the front desk",
+    chat_title: "Chat with the host",
+    chat_hello: "Hi, I'm Wooseok, your host. Tap a question.",
+    typing: "typing",
+    reset: "Restart",
+    close: "Close",
+    quick_title: "Quick view",
+    quick_note: "Everything in one scroll, for anyone who'd rather skip the game.",
+  },
+};
+
+const CHAT = [
+  { ko: ["AI가 코드를 다 짜면 당신은 뭘 해요?", "무엇을 만들지 정하고, 경계를 코드로 걸고, 결과를 실서버 화면에서 확인합니다. 돈·삭제·고객 발송은 제가 승인해야 넘어갑니다. 에이전트는 빠른 손이고, 판단은 제 몫입니다."],
+    en: ["If AI writes the code, what do you do?", "I decide what to build, put the boundaries in code, and check the result on the live screen. Money, deletes and customer messages wait for my approval. The agent is fast hands; the judgement is mine."] },
+  { ko: ["가장 자랑할 만한 일은?", "Airbnb에서는 예약됐는데 저희 달력은 열려 있던 날을 953박에서 264박으로, 손님이 실제로 예약할 수 있던 날은 279박에서 0박으로 줄인 일입니다. 버그 4개를 찾아 고쳤습니다."],
+    en: ["What are you proudest of?", "Cutting nights that were booked on Airbnb but still open on our calendar from 953 to 264, and guest-bookable ones from 279 to 0, by finding and fixing four sync bugs."] },
+  { ko: ["진단이 틀리면 어떻게 해요?", "조용히 넘기지 않고 기록으로 정정합니다. Airbnb 스캔이 중간에 끊기던 문제도 첫 진단이 틀렸는데, 재현으로 진짜 원인을 찾고 회귀 테스트 66건을 남겼습니다."],
+    en: ["What if your diagnosis is wrong?", "I correct it in writing, not quietly. My first diagnosis of truncated Airbnb scans was wrong; I reproduced it, found the real cause and left 66 regression tests behind."] },
+  { ko: ["영어는 어느 정도예요?", "읽기·쓰기는 업무에 문제없고, 말하기는 연습 중입니다. 글로 하는 비동기 협업이면 제 실력이 다 나옵니다."],
+    en: ["How's your English?", "Reading and writing are work-ready; speaking is improving. In written, async teams I work at full strength."] },
+  { ko: ["재택도 되나요?", "네. 출근·하이브리드·재택 모두 이야기해 볼 수 있습니다. 해외 회사라면 원격으로 일합니다."],
+    en: ["Can you work remotely?", "Yes. On-site, hybrid or remote are all open; for companies abroad, remote."] },
+  { ko: ["희망 연봉은요?", "첫 통화에서 이야기 나누고 싶습니다. 프런트(F)에서 예약 요청을 보내 주세요."],
+    en: ["Salary expectations?", "I'd like to talk about it on the first call. Send a booking request from the front desk (F)."] },
+  { ko: ["왜 숙소 콘셉트예요?", "숙박 플랫폼을 만드는 개발자라서요. 이 페이지도 빌드 도구 없이 HTML·CSS·JavaScript로 직접 만들었습니다."],
+    en: ["Why a lodging theme?", "Because I build a lodging platform for a living. I made this page myself in plain HTML, CSS and JavaScript, no build step."] },
+];
