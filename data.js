@@ -173,6 +173,8 @@ const AMEN = [
 const STAYS = [
   { when: "2025.12 –", ko: ["위홈", "기술·운영 총괄, 풀스택 개발 리드", "PHP·JS 웹, MySQL, AWS, iOS·Android 앱. 외부 서비스 30여 개, 크론 229개. AWS Bedrock 생성형 AI 기능을 사람 최종 검수와 함께 운영."],
     en: ["Wehome", "Head of Technology & Operations, lead full-stack engineer", "PHP/JS web, MySQL, AWS, native iOS and Android. 30+ external services, 229 scheduled jobs. Generative AI on AWS Bedrock with human final review."] },
+  { when: "2026.04 – 2026.09", ko: ["리포즈", "외주(크리오스), 디자인·개발 단독", "프라이빗 풀빌라 예약 사이트를 디자인부터 결제·배포까지 혼자 만들었습니다. Next.js·TypeScript·토스페이먼츠. 운영 중."],
+    en: ["Repause", "Freelance (via Krios), solo designer and developer", "A private pool villa booking site, designed, built and deployed solo. Next.js, TypeScript, Toss Payments. Live."] },
   { when: "2025.05 – 2026.01", ko: ["더추모", "웹개발자, 웹사이트 단독 구축·운영", "AI 개발 도입으로 개발 기간 50% 이상 단축, 실시간 알림톡, 비개발자용 관리자 화면."],
     en: ["The Choomo", "Web developer, built and ran the site alone", "AI-assisted development (50%+ faster), real-time KakaoTalk alerts, a self-serve admin UI."] },
   { when: "2023.01 – 2025.04", ko: ["프리랜서", "웹퍼블리셔", "업종이 다른 사이트의 반응형 재설계·접근성 마크업·오류 수정."],
