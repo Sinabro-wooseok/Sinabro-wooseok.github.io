@@ -181,8 +181,8 @@ const STAYS = [
     en: ["Freelance", "Web publisher", "Responsive rebuilds, accessible markup and debugging across industries."] },
   { when: "2024.09 – 2024.12", ko: ["에어패스", "AI 데이터", "장애인 접근성 AI 과제의 행동·음성 데이터 전처리·라벨링·검수."],
     en: ["Airpass", "AI data specialist", "Gesture and atypical-speech data for a government-funded accessibility AI."] },
-  { when: "2017.03 – 2024.02", ko: ["리앤양", "웹개발자·팀장, Cafe24 자사몰 7년", "UI, PG 결제, 회원등급·적립금·쿠폰, 모바일 결제 단계 축소."],
-    en: ["LeeAndYang", "Web developer & team lead, 7 years", "Storefront UI, PG payments, tiers, points, coupons, a shorter mobile checkout."] },
+  { when: "2017.03 – 2024.02", ko: ["리앤양", "웹개발자·단독 팀장(6명 팀), Cafe24 자사몰 7년", "입사 3개월 만에 팀장. UI, PG 결제, 회원등급·적립금·쿠폰, 모바일 결제 단계 축소."],
+    en: ["LeeAndYang", "Web developer & sole team lead (team of 6), 7 years", "Team lead 3 months after joining. Storefront UI, PG payments, tiers, points, coupons, a shorter mobile checkout."] },
 ];
 
 const RULES = {
