@@ -148,8 +148,8 @@ const REVIEWS = [
     ko: ["사내 문서 RAG 검색 예제를 만들어 공개했습니다. 권한 필터를 순위 매기기 전에 걸어 볼 수 없는 문서는 점수에도 안 나오고, 근거가 부족하면 답하지 않으며, 문서 속 지시문·링크·개인정보는 모델에 넘기기 전에 가립니다.", "질문 16개 평가에서 권한 누출 0, 거절 정확도 1.0. 첫 판은 0.75였고 고친 과정까지 README에 적었습니다. 운영 데이터가 아닌 설계 검증용 예제입니다."],
     en: ["Built and open-sourced an enterprise-docs RAG search example. ACLs filter before ranking so forbidden docs never show up in scores, answers are refused when evidence is thin, and injected instructions, links and personal data are masked before reaching the model.", "On a 16-question eval: 0 ACL leaks, refusal accuracy 1.0 (up from 0.75 in the first version; the fix is in the README). A design-validation example, not production data."], link: "https://github.com/Sinabro-wooseok/rag-guarded-search" },
   { c: "app", n: "+42 / +52",
-    ko: ["약 2주 동안 iOS 빌드 69 → 111, Android 88 → 140을 연속 출시했습니다.", "스토어 빌드 번호 기준입니다. 출시마다 Maestro 회귀 시나리오 8개로 점검했습니다."],
-    en: ["Shipped iOS builds 69 → 111 and Android 88 → 140 in about two weeks.", "Counted by store build numbers. Every release ran 8 Maestro regression flows."] },
+    ko: ["입사 후 iOS·Android 앱의 수정·개선은 모두 제가 직접 했습니다. 약 2주 동안 iOS 빌드 69 → 111, Android 88 → 140을 연속 출시했습니다.", "홈 영상 앱 안 재생, 숙소 화면 스크롤 끊김 개선, 구글 로그인 오류·가격 필터 수정, 메시지 사진 10장 전송, 예약 후 평점 요청 등. 스토어 빌드 번호 기준이며 출시마다 Maestro 회귀 시나리오 8개로 점검했습니다."],
+    en: ["Every iOS and Android app change since I joined is my own work. Shipped iOS builds 69 → 111 and Android 88 → 140 in about two weeks.", "In-app video playback, smoother stay pages, Google sign-in and price-filter fixes, 10-photo messages, an in-app rating prompt. Counted by store build numbers; every release ran 8 Maestro regression flows."] },
   { c: "ai", n: "57 · 39 · 31",
     ko: ["규칙 57개, 훅 39개, 스킬 31개로 코딩 에이전트를 운영합니다. 삭제·고객 발송·돈이 걸린 일은 사람이 승인해야 넘어갑니다.", "일부를 GitHub agent-guardrails 저장소에 공개했습니다."],
     en: ["I run coding agents with 57 rules, 39 hooks and 31 skills. Deletes, customer messages and money wait for a human.", "Part of it is open source in the agent-guardrails repository on GitHub."], link: "https://github.com/Sinabro-wooseok/agent-guardrails" },
@@ -183,8 +183,8 @@ const AMEN = [
 ];
 
 const STAYS = [
-  { when: "2025.12 –", ko: ["위홈", "기술·운영 총괄, 풀스택 개발 리드", "PHP·JS 웹, MySQL, AWS, iOS·Android 앱. 외부 서비스 30여 개, 크론 229개. AWS Bedrock 생성형 AI 기능을 사람 최종 검수와 함께 운영."],
-    en: ["Wehome", "Head of Technology & Operations, lead full-stack engineer", "PHP/JS web, MySQL, AWS, native iOS and Android. 30+ external services, 229 scheduled jobs. Generative AI on AWS Bedrock with human final review."] },
+  { when: "2025.12 –", ko: ["위홈", "기술·운영 총괄, 풀스택 개발 리드", "PHP·JS 웹, MySQL, AWS, iOS·Android 앱(입사 후 앱 수정·개선 전부 직접). 외부 서비스 30여 개, 크론 229개. AWS Bedrock 생성형 AI 기능을 사람 최종 검수와 함께 운영."],
+    en: ["Wehome", "Head of Technology & Operations, lead full-stack engineer", "PHP/JS web, MySQL, AWS, native iOS and Android (every app change since joining is mine). 30+ external services, 229 scheduled jobs. Generative AI on AWS Bedrock with human final review."] },
   { when: "2026.04 – 2026.09", ko: ["리포즈", "외주(크리오스), 디자인·개발 단독", "프라이빗 풀빌라 예약 사이트를 디자인부터 결제·배포까지 혼자 만들었습니다. Next.js·TypeScript·토스페이먼츠. 운영 중."],
     en: ["Repause", "Freelance (via Krios), solo designer and developer", "A private pool villa booking site, designed, built and deployed solo. Next.js, TypeScript, Toss Payments. Live."] },
   { when: "2025.05 – 2026.01", ko: ["더추모", "웹개발자·팀장(5명 팀), 웹사이트 단독 구축·운영", "AI 개발 도입으로 개발 기간 50% 이상 단축, 실시간 알림톡, 비개발자용 관리자 화면."],
