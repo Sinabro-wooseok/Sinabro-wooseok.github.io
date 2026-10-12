@@ -103,7 +103,7 @@ const TEXT = {
 // 첫 화면 핵심 숫자
 const HERO_KPI = [
   { n: "279 → 0", ko: "Airbnb와 이중 예약될 수 있던 박수", en: "nights open to double booking vs Airbnb" },
-  { n: "40.7s → 1.1s", ko: "가장 느린 관리자 화면", en: "slowest admin screen" },
+  { n: "40.7s → 1.1s", ko: "가장 느린 조회(후기 수집 작업)", en: "slowest query (review-sync job)" },
   { n: "+52 / +62", ko: "3주간 iOS / Android 출시 빌드", en: "iOS / Android builds shipped in 3 weeks" },
 ];
 
@@ -133,8 +133,8 @@ const REVIEWS = [
     ko: ["공동호스트 권한 대조를 4가지 상태 모델로 설계해 숙소 76곳을 30분마다 자동 점검합니다.", "Airbnb의 공동호스트 권한과 위홈 기록을 4가지 상태로 나눠 차이를 찾아냅니다."],
     en: ["Designed co-host permission reconciliation on a 4-state model; 76 listings are checked every 30 minutes.", "Airbnb co-host permissions and our records are sorted into four states, so every mismatch is visible."] },
   { c: "perf", n: "40.7s → 1.1s",
-    ko: ["관리자 병목을 실측하고 고쳤습니다. 5.4 → 0.39초, 17 → 0.07초, 날짜 가용 확인 168 → 18ms.", "같은 화면·같은 데이터로 변경 전후 응답 시간을 쟀습니다. 한 시점의 측정값입니다."],
-    en: ["Measured and fixed admin bottlenecks. Also 5.4s → 0.39s, 17s → 0.07s, availability check 168 → 18 ms.", "Same screen, same data, timed before and after the change. Single-point measurements."] },
+    ko: ["가장 느린 조회(후기 수집 작업)를 실측하고 고쳤습니다. 법적 고지 목록 5.4 → 0.39초, 광고 대시보드 17 → 0.07초, 날짜 가용 확인 168 → 18ms.", "같은 쿼리·같은 데이터로 변경 전후 응답 시간을 쟀습니다. 한 시점의 측정값입니다."],
+    en: ["Measured and rewrote the slowest query (review-sync job). Also legal-page list 5.4s → 0.39s, ads dashboard 17s → 0.07s, availability check 168 → 18 ms.", "Same query, same data, timed before and after the change. Single-point measurements."] },
   { c: "perf", n: "600 → 50",
     ko: ["헤드리스 브라우저 크롤러 팜을 WAF 규칙 4개로 막았습니다. 분당 요청 600 → 50, 5분 합계 5xx 오류 1,300 → 40.", "Cloudflare 트래픽 분석으로 패턴을 찾고, 규칙 적용 전후를 같은 지표로 비교했습니다."],
     en: ["Stopped a headless-browser crawler farm with 4 WAF rules: 600 → 50 req/min, 5xx errors 1,300 → 40 per 5 min.", "Found the pattern in Cloudflare analytics and compared the same metrics before and after."] },
