@@ -172,6 +172,7 @@ h3 { font-family: var(--px); font-weight: 700; font-size: 20px; color: var(--ink
 .work { display: grid; grid-template-columns: 1fr 110px; gap: 10px; }
 .work img { width: 100%; display: block; border: 3px solid var(--line); }
 .work-t { margin-top: 10px; font-size: 14.5px; }
+.work.app { grid-template-columns: repeat(3, minmax(0, 120px)); margin-top: 22px; }
 .rules { margin: 0; padding-left: 20px; } .rules li { margin: 5px 0; }
 .tz { background: var(--card); border: 3px solid var(--line); padding: 14px; font-size: 14.5px; }
 .tz b { font-family: var(--px); font-weight: 400; }

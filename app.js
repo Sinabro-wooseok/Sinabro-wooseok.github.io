@@ -40,7 +40,9 @@ function careerHTML() {
 }
 function gardenHTML() {
   return `<div class="work"><img src="assets/repause_desktop.jpg" alt="repause.co.kr desktop" loading="lazy"><img src="assets/repause_mobile.jpg" alt="repause.co.kr mobile" loading="lazy"></div>
-    <p class="work-t">${t("repause")} <a href="https://repause.co.kr" target="_blank" rel="noopener">repause.co.kr</a></p>`;
+    <p class="work-t">${t("repause")} <a href="https://repause.co.kr" target="_blank" rel="noopener">repause.co.kr</a></p>
+    <div class="work app">${["play", "harbor", "album"].map((k) => `<img src="assets/dockferry_${L()}_${k}.jpg" alt="Dock Ferry ${k}" loading="lazy">`).join("")}</div>
+    <p class="work-t">${t("dockferry")} <a href="https://testflight.apple.com/join/9jP6rraM" target="_blank" rel="noopener">${t("dockferry_link")}</a></p>`;
 }
 function aiHTML() {
   const r = REVIEWS.filter((x) => x.c === "ai").map((x) => `<li><b>${x.n}</b> ${x[L()][0]}</li>`).join("");
