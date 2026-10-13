@@ -53,7 +53,7 @@ const TEXT = {
 // 첫 화면 핵심 숫자
 const HERO_KPI = [
   { n: "279 → 0", ko: "Airbnb 예약일이 위홈에서 예약 가능으로 노출된 박수", en: "Airbnb-booked nights left bookable on Wehome" },
-  { n: "40.7s → 1.1s", ko: "가장 느린 조회 전후 실측", en: "slowest query, measured before and after" },
+  { n: "40.7s → 1.1s", ko: "관리자 후기 대상 조회 전후 실측", en: "slowest admin query (review targets), before and after" },
   { n: "+52 / +62", ko: "약 3주간 iOS / Android 출시 빌드", en: "iOS / Android builds shipped in ~3 weeks" },
   { n: "65 / 8일", en_n: "65 / 8 days", ko: "도크 페리 TestFlight 빌드", en: "Dock Ferry TestFlight builds" },
 ];
@@ -78,8 +78,8 @@ const REVIEWS = [
     ko: ["공동호스트 권한 대조를 4가지 상태 모델로 설계해 숙소 76곳을 30분마다 자동 점검합니다.", "Airbnb의 공동호스트 권한과 위홈 기록을 4가지 상태로 나눠 차이를 찾아냅니다."],
     en: ["Designed co-host permission reconciliation on a 4-state model; 76 listings are checked every 30 minutes.", "Airbnb co-host permissions and our records are sorted into four states, so every mismatch is visible."] },
   { c: "perf", n: "40.7s → 1.1s",
-    ko: ["가장 느린 조회(후기 수집 작업)를 실측하고 고쳤습니다. 법적 고지 목록 5.4 → 0.39초, 광고 대시보드 17 → 0.07초, 날짜 가용 확인 168 → 18ms.", "같은 쿼리·같은 데이터로 변경 전후 응답 시간을 쟀습니다. 한 시점의 측정값입니다."],
-    en: ["Measured and rewrote the slowest query (review-sync job). Also legal-page list 5.4s → 0.39s, ads dashboard 17s → 0.07s, availability check 168 → 18 ms.", "Same query, same data, timed before and after the change. Single-point measurements."] },
+    ko: ["가장 느린 관리자 조회(후기 대상 조회)를 실측하고 고쳤습니다. 법적 고지 목록 5.4 → 0.39초, 광고 대시보드 17 → 0.07초, 날짜 가용 확인 168 → 18ms.", "같은 쿼리·같은 데이터로 변경 전후 응답 시간을 쟀습니다. 한 시점의 측정값입니다."],
+    en: ["Measured and rewrote the slowest admin query (review targets). Also legal-page list 5.4s → 0.39s, ads dashboard 17s → 0.07s, availability check 168 → 18 ms.", "Same query, same data, timed before and after the change. Single-point measurements."] },
   { c: "perf", n: "600 → 50",
     ko: ["헤드리스 브라우저 크롤러 팜을 WAF 규칙 4개로 막았습니다. 분당 요청 600 → 50, 5분 합계 5xx 오류 1,300 → 40.", "Cloudflare 트래픽 분석으로 패턴을 찾고, 규칙 적용 전후를 같은 지표로 비교했습니다."],
     en: ["Stopped a headless-browser crawler farm with 4 WAF rules: 600 → 50 req/min, 5xx errors 1,300 → 40 per 5 min.", "Found the pattern in Cloudflare analytics and compared the same metrics before and after."] },
@@ -132,8 +132,8 @@ const AMEN = [
 // 경력: [회사, 직함, 설명], tags, 병행 여부
 const EXP = [
   { when: "2026.01 — 현재", en_when: "Jan 2026 – Present",
-    ko: ["위홈", "풀스택 개발자 · 기술·운영 총괄", "PHP·JS 웹, 백엔드 API, MySQL, AWS, iOS·Android 앱(입사 후 앱 수정·개선 전부 직접). Airbnb·Agoda·Channex·투지아 연동과 결제·정산, 외부 서비스 30여 개·크론 229개 운영. AWS Bedrock 생성형 AI 기능을 사람 최종 검수와 함께 운영합니다."],
-    en: ["Wehome", "Full-Stack Engineer · Head of Technology & Operations", "PHP/JS web, backend APIs, MySQL, AWS, native iOS and Android (every app change since joining is mine). Airbnb, Agoda, Channex and Tujia integrations, payments and settlement, 30+ external services and 229 scheduled jobs. Generative AI on AWS Bedrock with human final review."],
+    ko: ["위홈", "풀스택 개발자 · 기술·운영 총괄", "PHP·JS 웹, 백엔드 API, MySQL, AWS, iOS·Android 앱(입사 후 앱 수정·개선 전부 직접). Airbnb·Agoda·Channex·투지아 연동과 결제·정산, 외부 서비스 30여 개·크론 229개 운영. AWS Bedrock 상담 챗봇(읽기 전용 조회·개인정보 가림)은 10월 첫 주 해결률 55%, 상담원 넘김 22%."],
+    en: ["Wehome", "Full-Stack Engineer · Head of Technology & Operations", "PHP/JS web, backend APIs, MySQL, AWS, native iOS and Android (every app change since joining is mine). Airbnb, Agoda, Channex and Tujia integrations, payments and settlement, 30+ external services and 229 scheduled jobs. A support chatbot on AWS Bedrock (read-only tools, PII masked) resolved 55% and handed 22% to agents in the first week of October."],
     tags: ["PHP", "CodeIgniter", "MySQL", "AWS", "Swift", "Java", "Claude Code"] },
   { when: "2025.05 — 2026.01", en_when: "May 2025 – Jan 2026",
     ko: ["더추모", "웹개발자 · 팀장(5명 팀)", "웹사이트를 단독으로 구축·운영했습니다. AI 개발 도입으로 퍼블리싱·기능 개발 기간 50% 이상 단축, 실시간 알림톡, 비개발자용 관리자 화면."],
