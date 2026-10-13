@@ -131,11 +131,11 @@ const AMEN = [
 ];
 // 경력: [회사, 직함, 설명], tags, 병행 여부
 const EXP = [
-  { when: "2026.01 — 현재", en_when: "Jan 2026 – Present",
+  { when: "2026.01 — 현재", en_when: "Jan 2026 – Present", url: "https://www.wehome.me/",
     ko: ["위홈", "풀스택 개발자 · 기술·운영 총괄", "PHP·JS 웹, 백엔드 API, MySQL, AWS, iOS·Android 앱(입사 후 앱 수정·개선 전부 직접). Airbnb·Agoda·Channex·투지아 연동과 결제·정산, 외부 서비스 30여 개·크론 229개 운영. AWS Bedrock 상담 챗봇(읽기 전용 조회·개인정보 가림)은 10월 첫 주 해결률 55%, 상담원 넘김 22%."],
     en: ["Wehome", "Full-Stack Engineer · Head of Technology & Operations", "PHP/JS web, backend APIs, MySQL, AWS, native iOS and Android (every app change since joining is mine). Airbnb, Agoda, Channex and Tujia integrations, payments and settlement, 30+ external services and 229 scheduled jobs. A support chatbot on AWS Bedrock (read-only tools, PII masked) resolved 55% and handed 22% to agents in the first week of October."],
     tags: ["PHP", "CodeIgniter", "MySQL", "AWS", "Swift", "Java", "Claude Code"] },
-  { when: "2025.05 — 2026.01", en_when: "May 2025 – Jan 2026",
+  { when: "2025.05 — 2026.01", en_when: "May 2025 – Jan 2026", url: "https://thechoomo.co.kr/",
     ko: ["더추모", "웹개발자 · 팀장(5명 팀)", "웹사이트를 단독으로 구축·운영했습니다. AI 개발 도입으로 퍼블리싱·기능 개발 기간 50% 이상 단축, 실시간 알림톡, 비개발자용 관리자 화면."],
     en: ["The Choomo", "Web Developer · Team Lead (team of 5)", "Built and ran the company website alone. AI-assisted development cut delivery time by 50%+; real-time KakaoTalk alerts; a self-serve admin UI."],
     tags: ["PHP", "JavaScript", "Cursor"] },

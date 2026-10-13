@@ -21,7 +21,8 @@ function expHTML() {
     const when = L() === "en" ? e.en_when : e.when;
     const tag = e.concurrent ? `<em>${t("concurrent")}</em>` : "";
     const tags = e.tags.length ? `<ul class="tags">${e.tags.map((x) => `<li>${x}</li>`).join("")}</ul>` : "";
-    return `<li><div class="when">${when}</div><div><div class="co">${co} <span>· ${role}</span>${tag}</div><p>${desc}</p>${tags}</div></li>`;
+    const name = e.url ? ext(e.url, `${co} ↗`) : co;
+    return `<li><div class="when">${when}</div><div><div class="co">${name} <span>· ${role}</span>${tag}</div><p>${desc}</p>${tags}</div></li>`;
   }).join("");
 }
 

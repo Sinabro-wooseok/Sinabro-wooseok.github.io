@@ -66,6 +66,8 @@ p { margin: 0; }
 .exp .when { font-size: 13px; color: var(--muted); letter-spacing: .01em; padding-top: 3px; white-space: nowrap; }
 .exp .co { font-size: 17px; font-weight: 700; color: var(--ink); }
 .exp .co span { font-weight: 500; color: var(--muted); font-size: 15px; }
+.exp .co a { text-decoration: none; }
+.exp .co a:hover { color: var(--accent); }
 .exp .co em { font-style: normal; font-size: 12px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 1px 8px; margin-left: 6px; vertical-align: 2px; }
 .exp p { margin-top: 6px; font-size: 15px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; padding: 0; list-style: none; }
