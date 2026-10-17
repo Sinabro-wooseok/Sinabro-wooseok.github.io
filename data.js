@@ -54,7 +54,7 @@ const TEXT = {
 const HERO_KPI = [
   { n: "279 → 0", ko: "Airbnb 예약일이 위홈에서 예약 가능으로 노출된 박수", en: "Airbnb-booked nights left bookable on Wehome" },
   { n: "40.7s → 1.1s", ko: "관리자 후기 대상 조회 전후 실측", en: "slowest admin query (review targets), before and after" },
-  { n: "+52 / +62", ko: "약 3주간 iOS / Android 출시 빌드", en: "iOS / Android builds shipped in ~3 weeks" },
+  { n: "+66 / +77", ko: "약 4주간 iOS / Android 출시 빌드", en: "iOS / Android builds shipped in ~4 weeks" },
   { n: "65 / 8일", en_n: "65 / 8 days", ko: "도크 페리 TestFlight 빌드", en: "Dock Ferry TestFlight builds" },
 ];
 
@@ -92,9 +92,9 @@ const REVIEWS = [
   { c: "ai", n: "RAG · leaks 0",
     ko: ["사내 문서 RAG 검색 예제를 만들어 공개했습니다. 권한 필터를 순위 매기기 전에 걸어 볼 수 없는 문서는 점수에도 안 나오고, 근거가 부족하면 답하지 않으며, 문서 속 지시문·링크·개인정보는 모델에 넘기기 전에 가립니다.", "질문 16개 평가에서 권한 누출 0, 거절 정확도 1.0. 첫 판은 0.75였고 고친 과정까지 README에 적었습니다. 운영 데이터가 아닌 설계 검증용 예제입니다."],
     en: ["Built and open-sourced an enterprise-docs RAG search example. ACLs filter before ranking so forbidden docs never show up in scores, answers are refused when evidence is thin, and injected instructions, links and personal data are masked before reaching the model.", "On a 16-question eval: 0 ACL leaks, refusal accuracy 1.0 (up from 0.75 in the first version; the fix is in the README). A design-validation example, not production data."], link: "https://github.com/Sinabro-wooseok/rag-guarded-search" },
-  { c: "app", n: "+52 / +62",
-    ko: ["입사 후 iOS·Android 앱의 수정·개선은 모두 제가 직접 했습니다. 약 3주 동안 iOS 빌드 69 → 121, Android 88 → 150을 연속 출시했습니다.", "홈 영상 앱 안 재생, 숙소 화면 스크롤 끊김 개선, 구글 로그인 오류·가격 필터 수정, 메시지 사진 10장 전송, 예약 후 평점 요청 등. 스토어 빌드 번호 기준이며 출시마다 Maestro 회귀 시나리오 8개로 점검했습니다."],
-    en: ["Every iOS and Android app change since I joined is my own work. Shipped iOS builds 69 → 121 and Android 88 → 150 in about three weeks.", "In-app video playback, smoother stay pages, Google sign-in and price-filter fixes, 10-photo messages, an in-app rating prompt. Counted by store build numbers; every release ran 8 Maestro regression flows."] },
+  { c: "app", n: "+66 / +77",
+    ko: ["입사 후 iOS·Android 앱의 수정·개선은 모두 제가 직접 했습니다. 약 4주 동안 iOS 빌드 69 → 135, Android 88 → 165를 연속 출시했습니다.", "홈 영상 앱 안 재생, 숙소 화면 스크롤 끊김 개선, 구글 로그인 오류·가격 필터 수정, 메시지 사진 10장 전송, 예약 후 평점 요청 등. 스토어 빌드 번호 기준이며 출시마다 Maestro 회귀 시나리오 8개로 점검했습니다."],
+    en: ["Every iOS and Android app change since I joined is my own work. Shipped iOS builds 69 → 135 and Android 88 → 165 in about four weeks.", "In-app video playback, smoother stay pages, Google sign-in and price-filter fixes, 10-photo messages, an in-app rating prompt. Counted by store build numbers; every release ran 8 Maestro regression flows."] },
   { c: "app", n: "65 builds / 8 days",
     ko: ["개인 프로젝트로 퍼즐 게임 도크 페리를 혼자 만들어 8일 동안 TestFlight 빌드 65까지 배포했습니다. 레벨 생성기와 풀이기로 모든 판이 풀리는지 검사합니다.", "규칙별 자동 검사 23종이 빌드마다 돕니다. 빌드 번호는 App Store Connect 기준이고, 공개 베타 링크로 직접 해 보실 수 있습니다."],
     en: ["Built the puzzle game Dock Ferry solo as a personal project and shipped 65 TestFlight builds in 8 days. A level generator and solver prove every level is solvable.", "23 rule-level automated checks run on every build. Build numbers are from App Store Connect; try it yourself with the public beta link."], link: "https://testflight.apple.com/join/9jP6rraM" },
